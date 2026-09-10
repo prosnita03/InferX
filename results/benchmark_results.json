@@ -214,5 +214,29 @@
     "quality_score": 0.0,
     "status": "SUCCESS",
     "error_message": ""
+  },
+  {
+    "experiment_id": "exp_1789064745_tinyllama-1.1b-chat-v1.0_fp32_b1_s64_cT",
+    "timestamp": "2026-09-10 23:55:45",
+    "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "precision": "fp32",
+    "device": "mps",
+    "gpu": "N/A",
+    "batch_size": 1,
+    "sequence_length": 64,
+    "max_new_tokens": 32,
+    "kv_cache": true,
+    "warmup_iterations": 1,
+    "benchmark_iterations": 3,
+    "mean_latency_ms": 0.0,
+    "median_latency_ms": 0.0,
+    "p95_latency_ms": 0.0,
+    "tokens_generated": 0,
+    "tokens_per_second": 0.0,
+    "requests_per_second": 0.0,
+    "peak_memory_mb": 0.0,
+    "quality_score": 0.0,
+    "status": "FAILED",
+    "error_message": "Load error: Failed to load model 'TinyLlama/TinyLlama-1.1B-Chat-v1.0': Can't load the model for 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'TinyLlama/TinyLlama-1.1B-Chat-v1.0' is the correct path to a directory containing a file named pytorch_model.bin."
   }
 ]
