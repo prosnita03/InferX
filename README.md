@@ -80,7 +80,7 @@ InferX automatically profiles and adapts to available compute hardware:
 
 ### Step 1: Clone and Set Up Environment
 ```bash
-git clone https://github.com/your-username/InferX.git
+git clone https://github.com/prosnita03/InferX.git
 cd InferX
 
 # Create and activate virtual environment
