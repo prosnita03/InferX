@@ -1,0 +1,76 @@
+# InferX Benchmarking Matrix Configuration
+
+defaults:
+  warmup_iterations: 3
+  benchmark_iterations: 10
+  batch_size: 1
+  sequence_length: 128
+  max_new_tokens: 64
+  precision: "fp16"
+  kv_cache: true
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  do_sample: false  # Default to deterministic for reproducible measurements
+  seed: 42
+
+demo:
+  warmup_iterations: 1
+  benchmark_iterations: 2
+  batch_size: 1
+  sequence_length: 32
+  max_new_tokens: 16
+  precision: "fp32"
+  kv_cache: true
+  temperature: 0.0
+  do_sample: false
+  seed: 42
+
+experiment_matrix:
+  precisions: ["fp16", "int8", "int4"]
+  cpu_precisions: ["fp32", "int8"]
+  batch_sizes: [1, 2, 4, 8]
+  sequence_lengths: [128, 256, 512, 1024]
+  demo_sequence_lengths: [32, 64, 128]
+  kv_cache_modes: [true, false]
+
+scoring_objectives:
+  balanced:
+    description: "Harmonious trade-off across all 4 dimensions"
+    weights:
+      quality: 0.35
+      throughput: 0.25
+      latency: 0.25
+      memory: 0.15
+
+  low_latency:
+    description: "Prioritizes minimal time-to-first-token and fast completion"
+    weights:
+      quality: 0.20
+      throughput: 0.10
+      latency: 0.60
+      memory: 0.10
+
+  high_throughput:
+    description: "Maximizes batched tokens per second for high-concurrency serving"
+    weights:
+      quality: 0.20
+      throughput: 0.60
+      latency: 0.10
+      memory: 0.10
+
+  low_memory:
+    description: "Minimizes VRAM/RAM consumption for constrained environments"
+    weights:
+      quality: 0.20
+      throughput: 0.10
+      latency: 0.10
+      memory: 0.60
+
+  high_quality:
+    description: "Prioritizes fidelity and output accuracy above speed"
+    weights:
+      quality: 0.70
+      throughput: 0.10
+      latency: 0.10
+      memory: 0.10

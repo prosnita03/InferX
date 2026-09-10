@@ -1,0 +1,19 @@
+# InferX Hardware Configuration
+
+device_priority:
+  - "cuda"
+  - "mps"
+  - "cpu"
+
+memory_limits:
+  gpu_memory_safety_margin_pct: 10  # Stop allocations if free VRAM < 10%
+  cpu_max_memory_percent: 85        # Process warning threshold
+
+profiling:
+  enable_cuda_sync: true
+  enable_mps_sync: true
+  export_traces: true
+  trace_dir: "results/traces"
+  record_shapes: true
+  profile_memory: true
+  with_stack: false

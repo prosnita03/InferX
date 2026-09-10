@@ -1,0 +1,58 @@
+[
+  {
+    "id": "qa_01",
+    "task": "question_answering",
+    "prompt": "Question: What is the capital of France?\nAnswer:",
+    "reference": "Paris",
+    "metric": "exact_match"
+  },
+  {
+    "id": "qa_02",
+    "task": "question_answering",
+    "prompt": "Question: Which element has the chemical symbol 'O'?\nAnswer:",
+    "reference": "Oxygen",
+    "metric": "exact_match"
+  },
+  {
+    "id": "factual_01",
+    "task": "factual",
+    "prompt": "Complete the sentence: The planet closest to the Sun is",
+    "reference": "Mercury",
+    "metric": "f1_score"
+  },
+  {
+    "id": "factual_02",
+    "task": "factual",
+    "prompt": "In computer science, what does 'GPU' stand for?",
+    "reference": "Graphics Processing Unit",
+    "metric": "f1_score"
+  },
+  {
+    "id": "reasoning_01",
+    "task": "reasoning",
+    "prompt": "If a train travels 60 miles per hour for 2.5 hours, how many miles does it travel? State only the number.",
+    "reference": "150",
+    "metric": "exact_match"
+  },
+  {
+    "id": "reasoning_02",
+    "task": "reasoning",
+    "prompt": "A store has 12 apples. If 4 are sold and 5 are added, how many apples remain? Answer with just the number.",
+    "reference": "13",
+    "metric": "exact_match"
+  },
+  {
+    "id": "summarization_01",
+    "task": "summarization",
+    "prompt": "Summarize the following text in one sentence:\nMachine learning is a subset of artificial intelligence that focuses on building applications that learn from data and improve their accuracy over time without being explicitly programmed to do so.\nSummary:",
+    "reference": "Machine learning is an AI branch where systems learn and improve from data automatically.",
+    "metric": "rouge"
+  },
+  {
+    "id": "instruction_01",
+    "task": "instruction_following",
+    "prompt": "List three primary colors in alphabetical order separated by commas:",
+    "reference": "Blue, Red, Yellow",
+    "metric": "f1_score"
+  }
+]

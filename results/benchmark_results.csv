@@ -1,0 +1,10 @@
+experiment_id,timestamp,model,precision,device,gpu,batch_size,sequence_length,max_new_tokens,kv_cache,warmup_iterations,benchmark_iterations,mean_latency_ms,median_latency_ms,p95_latency_ms,tokens_generated,tokens_per_second,requests_per_second,peak_memory_mb,quality_score,status,error_message
+bench_1789062807_fp32_b1,2026-09-10 23:23:27,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,1,32,16,True,1,2,92.62,92.62,95.7,16,172.75,10.8,0.43,80.0,SUCCESS,
+exp_1789062936_tiny-random-gpt2_fp32_b1_s32_cT,2026-09-10 23:25:36,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,1,32,16,True,1,2,94.34,94.34,95.53,16,169.6,10.6,0.43,0.0,SUCCESS,
+exp_1789062951_tiny-random-gpt2_fp32_b1_s32_cF,2026-09-10 23:25:51,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,1,32,16,False,1,2,99.56,99.56,103.73,16,160.71,10.04,1.47,0.0,SUCCESS,
+exp_1789062962_tiny-random-gpt2_fp32_b1_s64_cT,2026-09-10 23:26:02,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,1,64,16,True,1,2,99.12,99.12,103.6,16,161.42,10.09,1.08,0.0,SUCCESS,
+exp_1789062971_tiny-random-gpt2_fp32_b1_s64_cF,2026-09-10 23:26:11,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,1,64,16,False,1,2,102.93,102.93,105.86,16,155.45,9.72,1.08,0.0,SUCCESS,
+exp_1789062979_tiny-random-gpt2_fp32_b2_s32_cT,2026-09-10 23:26:19,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,2,32,16,True,1,2,95.44,95.44,96.14,32,335.29,20.96,1.08,0.0,SUCCESS,
+exp_1789062986_tiny-random-gpt2_fp32_b2_s32_cF,2026-09-10 23:26:26,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,2,32,16,False,1,2,94.11,94.11,96.18,32,340.03,21.25,1.08,0.0,SUCCESS,
+exp_1789062996_tiny-random-gpt2_fp32_b2_s64_cT,2026-09-10 23:26:36,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,2,64,16,True,1,2,93.5,93.5,95.53,32,342.25,21.39,1.08,0.0,SUCCESS,
+exp_1789063006_tiny-random-gpt2_fp32_b2_s64_cF,2026-09-10 23:26:46,hf-internal-testing/tiny-random-gpt2,fp32,mps,N/A,2,64,16,False,1,2,94.69,94.69,96.09,32,337.94,21.12,1.08,0.0,SUCCESS,
